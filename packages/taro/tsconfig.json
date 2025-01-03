@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "noImplicitAny": false,
+    "noEmit": false,
+    "incremental": true,
+    "paths": {
+      "@mini/common": ["../../packages/common/src/index.ts"]
+    },
+    "types": ["vitest/globals"]
+  },
+  "exclude": ["**/node_modules", "**/.*/", "dist", "build", "**/fixtures/**"]
+}

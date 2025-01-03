@@ -1,0 +1,76 @@
+{
+  "name": "mini-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "mini tools",
+  "keywords": [
+    "mini",
+    "miniprogram",
+    "monorepo"
+  ],
+  "author": {
+    "name": "ShunQuan Wang",
+    "url": "https://github.com/tclxshunquan-wang"
+  },
+  "workspaces": [
+    "docs",
+    "packages/*"
+  ],
+  "scripts": {
+    "g:clean": "yarn clean:global-cache && yarn workspaces foreach -At run clean",
+    "g:build": "yarn g:build-release",
+    "?build-release": "When https://github.com/atlassian/changesets/issues/432 has a solution we can remove this trick",
+    "g:build-release": "yarn workspaces foreach -At run build-release",
+    "g:test": "yarn workspaces foreach -At run test",
+    "g:test-unit": "yarn workspaces foreach -At run test-unit",
+    "g:test-e2e": "yarn workspaces foreach -At run test-e2e",
+    "g:test-coverage": "yarn workspaces foreach -At run test-coverage",
+    "g:lint": "yarn workspaces foreach -At run lint --color",
+    "g:typecheck": "yarn workspaces foreach -At run typecheck",
+    "g:lint-staged-files": "lint-staged --allow-empty",
+    "g:fix-all-files": "yarn workspaces foreach -At run fix-all-files",
+    "g:changeset": "changeset",
+    "g:version": "changeset version",
+    "g:release": "yarn g:build-release && changeset publish",
+    "g:cz": "cz",
+    "g:publish-local": "yarn changeset version && cd scripts && ./publish-to-verdaccio.sh",
+    "clean:global-cache": "rimraf --no-glob ./.cache",
+    "nuke:node_modules": "rimraf '**/node_modules'",
+    "check:install": "yarn dlx @yarnpkg/doctor@3.1.4 .",
+    "install:playwright": "npx playwright install",
+    "postinstall": "is-ci || yarn husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "cross-env": "7.0.3"
+  },
+  "devDependencies": {
+    "@changesets/changelog-git": "0.2.0",
+    "@changesets/cli": "2.27.11",
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "@hyperse/eslint-config-hyperse": "^1.2.9",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^9.17.0",
+    "husky": "9.1.7",
+    "is-ci": "4.1.0",
+    "lint-staged": "15.3.0",
+    "minimist": "1.2.8",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "terser": "5.37.0",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": "please-use-yarn",
+    "yarn": ">=1.22.0"
+  },
+  "packageManager": "yarn@4.3.0"
+}
