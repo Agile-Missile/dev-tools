@@ -1,3 +1,1 @@
-export const fun = () => {
-  return 'library02';
-};
+export * from './main/index.js';
