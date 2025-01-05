@@ -1,1 +1,1 @@
-# @agile/library01
+# @mini/cli
