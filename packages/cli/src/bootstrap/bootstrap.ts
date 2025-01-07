@@ -14,26 +14,12 @@ export async function bootstrap(
     cwd: curDirName,
   });
 
-  if (packageJson) {
-    // Check if newer cli version here
-    // FIXME: Disable update notifier for temporary, cause of the npm mirror registry is not stable.
-    // Check if newer cli version at `flat info` command.
-    // await updateNotifier({
-    //   pkg: {
-    //     name: packageJson?.name || '',
-    //     version: packageJson?.version || '',
-    //   },
-    //   shouldNotifyInNpmScript: true,
-    //   registry: 'https://registry.npmmirror.com',
-    // });
-  }
-
   // Register built-in commands.
-  const armitCli = createCli({
+  const miniCli = createCli({
     context: '@mini',
     packageJson,
     ...options,
   }).register(uploadCmd);
 
-  return armitCli;
+  return miniCli;
 }
