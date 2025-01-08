@@ -1,30 +1,33 @@
-import { createCommand, createSubCommands } from '@agilejs/commander';
-import { terminalColor } from '@agilejs/terminal';
+import { createCommand } from '@agilejs/commander';
 import { type CheckCommandArgs, UploadCommand } from './handler.js';
 
 export const uploadCmd = createCommand<CheckCommandArgs>(
   'upload',
   {
     command: 'upload',
-    describe: 'Upload mini-app to the server.',
-    builder(args: any) {
-      const program = args
-        .demandCommand(
-          1,
-          `${terminalColor(['black', 'red'])('ERR!')} ${terminalColor([
-            'red',
-            'magenta',
-          ])(
-            ' A sub-command is required. Pass -h to see all available commands and options.\n'
-          )}`
+    describe: `Automatically upload miniprogram assets`,
+    builder(args) {
+      return args
+        .example(
+          `$0 mini upload -k="/.cache/private.xxxxxxxx.key" --mv="1.0.0" --md="This is a test"`,
+          'Upload matched `fast-glob` files to remote ftp server'
         )
-        .option('projectCwd', {
-          alias: 'p',
+        .option('key', {
+          alias: 'k',
           type: 'string',
-          default: process.cwd(),
-          describe: `Specified the project root directory, it's optional`,
+          default: '',
+          describe: `The private key that will be used to upload`,
+        })
+        .option('miniVer', {
+          type: 'string',
+          default: '1.0.0',
+          describe: `The version of the miniprogram uploaded`,
+        })
+        .option('miniDesc', {
+          type: 'string',
+          default: '',
+          describe: `The description of the miniprogram uploaded`,
         });
-      return createSubCommands(program);
     },
   },
   UploadCommand

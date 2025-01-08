@@ -5,19 +5,20 @@ __metadata:
   version: 8
   cacheKey: 10
 
-"@agilejs/commander@npm:1.0.8":
-  version: 1.0.8
-  resolution: "@agilejs/commander@npm:1.0.8"
+"@agilejs/commander@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "@agilejs/commander@npm:1.0.9"
   dependencies:
     "@agilejs/terminal": "npm:1.0.8"
     "@armit/logger": "npm:0.2.8"
     "@armit/logger-node": "npm:0.2.9"
+    "@types/yargs": "npm:17.0.33"
     yargs: "npm:17.7.2"
-  checksum: 10/a22c7664103ef8ec46ecdec32c0b796431eaf8db7a53698abc6b24722c4481cffcec208aa4c1dd0946cb735ba1c4bcac695c5ae37982eed6914eb76e4ccd867d
+  checksum: 10/5df201ff5d5cc7bc66d392e57de105ecb5c4a474be9b2a69cedd835c6502f2dbf88b5e947470f61cc91d16f4482b533a84cbb59af8bfe6e46473c51d7ca11097
   languageName: node
   linkType: hard
 
-"@agilejs/terminal@npm:1.0.8":
+"@agilejs/terminal@npm:1.0.8, @agilejs/terminal@npm:^1.0.8":
   version: 1.0.8
   resolution: "@agilejs/terminal@npm:1.0.8"
   dependencies:
@@ -5346,8 +5347,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mini/cli@workspace:packages/cli"
   dependencies:
-    "@agilejs/commander": "npm:1.0.8"
-    "@agilejs/terminal": "npm:1.0.8"
+    "@agilejs/commander": "npm:^1.0.9"
+    "@agilejs/terminal": "npm:^1.0.8"
     "@agilejs/typing-beautify": "npm:1.0.6"
     "@hyperse/eslint-config-hyperse": "npm:^1.2.9"
     "@hyperse/exec-program": "npm:^1.0.10"
@@ -5359,6 +5360,7 @@ __metadata:
     execa: "npm:9.5.2"
     npm-run-all: "npm:4.1.5"
     rimraf: "npm:6.0.1"
+    type-fest: "npm:4.31.0"
     typescript: "npm:^5.7.2"
     vite-tsconfig-paths: "npm:5.1.4"
     vitest: "npm:2.1.8"
@@ -6918,6 +6920,22 @@ __metadata:
   version: 2.0.10
   resolution: "@types/unist@npm:2.0.10"
   checksum: 10/e2924e18dedf45f68a5c6ccd6015cd62f1643b1b43baac1854efa21ae9e70505db94290434a23da1137d9e31eb58e54ca175982005698ac37300a1c889f6c4aa
+  languageName: node
+  linkType: hard
+
+"@types/yargs-parser@npm:*":
+  version: 21.0.3
+  resolution: "@types/yargs-parser@npm:21.0.3"
+  checksum: 10/a794eb750e8ebc6273a51b12a0002de41343ffe46befef460bdbb57262d187fdf608bc6615b7b11c462c63c3ceb70abe2564c8dd8ee0f7628f38a314f74a9b9b
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:17.0.33":
+  version: 17.0.33
+  resolution: "@types/yargs@npm:17.0.33"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: 10/16f6681bf4d99fb671bf56029141ed01db2862e3db9df7fc92d8bea494359ac96a1b4b1c35a836d1e95e665fb18ad753ab2015fc0db663454e8fd4e5d5e2ef91
   languageName: node
   linkType: hard
 

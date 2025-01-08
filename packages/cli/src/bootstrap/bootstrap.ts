@@ -1,7 +1,7 @@
 import { type CliMain, type CliOptions, createCli } from '@agilejs/commander';
 import { getDirname } from '@armit/file-utility';
 import { readPackageData } from '@armit/package';
-import { uploadCmd } from '../upload/define.js';
+import { miniCommand } from '../main/define.js';
 
 export async function bootstrap(
   options: Partial<CliOptions> = {}
@@ -19,7 +19,7 @@ export async function bootstrap(
     context: '@mini',
     packageJson,
     ...options,
-  }).register(uploadCmd);
+  }).register(miniCommand);
 
   return miniCli;
 }
