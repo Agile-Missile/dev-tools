@@ -17,12 +17,17 @@ describe('@flatjs/cli bootstrap', () => {
     expect(stdout).toStrictEqual(
       expect.stringContaining(`Usage: cli-boot.ts <command> [options]`)
     );
+
     expect(stdout).toStrictEqual(expect.stringContaining(`Commands:`));
-    expect(stdout).toStrictEqual(expect.stringContaining(`cli-boot.ts info`));
+    expect(stdout).toStrictEqual(expect.stringContaining(`cli-boot.ts mini`));
     expect(stdout).toStrictEqual(expect.stringContaining(`Globals:`));
     expect(stdout).toStrictEqual(expect.stringContaining(`-h, --help`));
     expect(stdout).toStrictEqual(expect.stringContaining(`-v, --version`));
     expect(stdout).toStrictEqual(expect.stringContaining(`-l, --log-level`));
-    expect(stdout).toStrictEqual(expect.stringContaining(`Copyright 2023`));
+    expect(stdout).toStrictEqual(
+      expect.stringContaining(
+        'Copyright 2024 @mini (​https://github.com/Agile-Missile/agilejs​)'
+      )
+    );
   });
 });

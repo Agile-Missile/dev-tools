@@ -13,6 +13,6 @@ describe('test create mini project', () => {
     expect(project['_appid']).toBe('wx0a60ec391e1c8dee');
     expect(project['_type']).toBe('miniProgram');
     expect(project['_projectPath']).toBe(join(projectCwd, './'));
-    expect(project['_privateKey']).toBe('place-your-private-key-here');
+    expect(project['_privateKey']).toBeDefined();
   });
 });

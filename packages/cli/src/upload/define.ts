@@ -1,7 +1,7 @@
 import { createCommand } from '@agilejs/commander';
-import { type CheckCommandArgs, UploadCommand } from './handler.js';
+import { UploadCommand, type UploadCommandArgs } from './handler.js';
 
-export const uploadCmd = createCommand<CheckCommandArgs>(
+export const uploadCmd = createCommand<UploadCommandArgs>(
   'upload',
   {
     command: 'upload',

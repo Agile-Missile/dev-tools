@@ -20,7 +20,6 @@
     "./index.js"
   ],
   "scripts": {
-    "mini:upload": "node --import=@hyperse/ts-node-paths/register ./tests/start-upload.ts",
     "build": "rimraf dist && tsc -p ./tsconfig.build.json",
     "?build-release": "When https://github.com/atlassian/changesets/issues/432 has a solution we can remove this trick",
     "build-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz",

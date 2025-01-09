@@ -7,6 +7,7 @@ import type {
 import type { IProject } from 'miniprogram-ci/dist/@types/types/core.js';
 import ora from 'ora';
 import { formatProgressMsg } from '../helpers/format-progress-msg.js';
+import type { MiniCiOptions } from '../types/type-ci-options.js';
 
 export type UploadResult = {
   subPackageInfo?: TSubPackageInfo;
@@ -16,8 +17,11 @@ export type UploadResult = {
 
 export const upload = async (
   project: IProject,
-  uploadOptions: Omit<IInnerUploadOptions, 'onProgressUpdate' | 'project'>
+  uploadOptions: Omit<IInnerUploadOptions, 'onProgressUpdate' | 'project'>,
+  cliOptions: MiniCiOptions = {}
 ): Promise<UploadResult> => {
+  const { exitProcess = true } = cliOptions;
+
   const spinner = ora(`Miniprogram Upload start \n`).start();
   return new Promise((resolve, reject) => {
     ci.upload({
@@ -35,6 +39,9 @@ export const upload = async (
       })
       .finally(() => {
         spinner.stop();
+        if (exitProcess) {
+          process.exit(0);
+        }
       });
   });
 };

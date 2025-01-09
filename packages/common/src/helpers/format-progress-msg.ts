@@ -1,5 +1,5 @@
 import chalk, { type ChalkInstance } from 'chalk';
-import type { MiniProgramCI } from 'miniprogram-ci/dist/@types/types/ci.js';
+import type { MiniProgramCI } from 'miniprogram-ci/dist/@types/types/index.js';
 import { isString } from '@dimjs/lang';
 
 const ColorMap: Record<MiniProgramCI.ITaskStatus['status'], ChalkInstance> = {

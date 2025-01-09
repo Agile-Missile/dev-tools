@@ -1,5 +1,6 @@
 import { createCommand, createSubCommands } from '@agilejs/commander';
 import { terminalColor } from '@agilejs/terminal';
+import { previewCmd } from '../preview/define.js';
 import { uploadCmd } from '../upload/define.js';
 import { MiniCommand, type MiniCommandArgs } from './handler.js';
 
@@ -26,7 +27,7 @@ export const miniCommand = createCommand<MiniCommandArgs>(
           default: process.cwd(),
           describe: `Specified the project root directory, it's optional`,
         });
-      return createSubCommands(program, uploadCmd);
+      return createSubCommands(program, uploadCmd, previewCmd);
     },
   },
   MiniCommand
