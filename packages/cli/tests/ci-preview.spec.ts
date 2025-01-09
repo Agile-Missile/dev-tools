@@ -1,7 +1,6 @@
 import { existsSync, rmSync } from 'node:fs';
 import { join } from 'path';
 import { getDirname } from '@armit/file-utility';
-import { PreviewCommand } from '../src/index.js';
 import { runScript } from './run-script.js';
 
 describe('@mini/cli `preview`', () => {
