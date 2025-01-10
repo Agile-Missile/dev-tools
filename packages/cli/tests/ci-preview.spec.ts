@@ -35,7 +35,7 @@ describe('@mini/cli `preview`', () => {
       'preview',
       '-p',
       miniprogramCwd,
-      '-k',
+      '--privateKey',
       miniprogramKey,
       '--miniVer',
       '1.2.2',

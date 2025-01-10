@@ -23,7 +23,7 @@ export type UploadCommandArgs = CommandArgv<{
    * The private key that will be used to upload
    * @alias (-k)
    */
-  key: string;
+  privateKey: string;
 
   /**
    * The version that will be used to upload
@@ -47,7 +47,11 @@ export class UploadCommand extends AbstractHandler<UploadCommandArgs> {
 
   async handle() {
     this.logger.info('upload start...');
-    const { key: privateKeyPath, miniVer = '1.0.0', miniDesc = '' } = this.args;
+    const {
+      privateKey: privateKeyPath,
+      miniVer = '1.0.0',
+      miniDesc = '',
+    } = this.args;
     const projectCwd = this.getProjectCwd();
 
     const command: MiniConfigBase = {

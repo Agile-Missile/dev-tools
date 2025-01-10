@@ -27,7 +27,7 @@ describe('@mini/cli `upload`', () => {
       'upload',
       '-p',
       miniprogramCwd,
-      '-k',
+      '--privateKey',
       miniprogramKey,
       '--miniVer',
       '1.2.2',

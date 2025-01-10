@@ -22,41 +22,35 @@ export type PreviewCommandArgs = CommandArgv<{
 
   /**
    * The private key that will be used to upload
-   * @alias (-k)
    */
-  key: string;
+  privateKey: string;
 
   /**
    * The version that will be used to upload
-   * @alias (-mv)
    * @default `1.0.0`
    */
   miniVer: string;
 
   /**
    * The description that will be used to upload
-   * @alias (-md)
    * @default `''`
    */
   miniDesc: string;
 
   /**
    * The format of the qrcode
-   * @alias (--format)
    * @default `image`
    */
   format?: 'base64' | 'image' | 'terminal';
 
   /**
    * The output of the qrcode
-   * @alias (--dist)
    * @default `.dist`
    */
   output?: string;
 
   /**
    * The filename of the qrcode
-   * @alias (--filename)
    * @default `preview.png`
    */
   filename?: string;
@@ -71,7 +65,7 @@ export class PreviewCommand extends AbstractHandler<PreviewCommandArgs> {
     this.logger.info('preview start...');
     const projectCwd = this.getProjectCwd();
     const {
-      key: privateKeyPath,
+      privateKey: privateKeyPath,
       miniVer = '1.0.0',
       miniDesc = '',
       format = 'image',

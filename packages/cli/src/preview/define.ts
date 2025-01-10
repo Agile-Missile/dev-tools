@@ -9,11 +9,10 @@ export const previewCmd = createCommand<PreviewCommandArgs>(
     builder(args) {
       return args
         .example(
-          `$0 mini preview -k="/.cache/private.xxxxxxxx.key" --mv="1.0.0" --md="This is a test"`,
+          `$0 mini preview --privateKey="/.cache/private.xxxxxxxx.key" --miniVer="1.0.0" --miniDesc="This is a test" --format="image" --output=".dist" --filename="preview.png"`,
           'Preview matched `fast-glob` files to remote ftp server'
         )
-        .option('key', {
-          alias: 'k',
+        .option('privateKey', {
           type: 'string',
           default: '',
           describe: `The private key that will be used to upload`,

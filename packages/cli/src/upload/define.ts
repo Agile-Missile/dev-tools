@@ -9,11 +9,10 @@ export const uploadCmd = createCommand<UploadCommandArgs>(
     builder(args) {
       return args
         .example(
-          `$0 mini upload -k="/.cache/private.xxxxxxxx.key" --mv="1.0.0" --md="This is a test"`,
+          `$0 mini upload -k="/.cache/private.xxxxxxxx.key" --miniVer="1.0.0" --miniDesc="This is a test"`,
           'Upload matched `fast-glob` files to remote ftp server'
         )
-        .option('key', {
-          alias: 'k',
+        .option('privateKey', {
           type: 'string',
           default: '',
           describe: `The private key that will be used to upload`,
