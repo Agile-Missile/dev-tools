@@ -1,1 +1,1 @@
-# @mini/taro
+# @agilejs/taro

@@ -7,7 +7,7 @@
     "noEmit": false,
     "incremental": true,
     "paths": {
-      "@mini/common": ["../../packages/common/src/index.ts"]
+      "@agilejs/common": ["../../packages/common/src/index.ts"]
     },
     "types": ["vitest/globals"]
   },

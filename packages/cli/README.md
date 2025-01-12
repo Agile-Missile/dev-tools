@@ -1,1 +1,1 @@
-# @mini/cli
+# @agilejs/cli

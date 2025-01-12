@@ -8,7 +8,7 @@ import {
   type MiniOptions,
   requireResolve,
   upload,
-} from '@mini/common';
+} from '@agilejs/common';
 
 export type UploadCommandArgs = CommandArgv<{
   /**

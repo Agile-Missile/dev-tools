@@ -1,4 +1,4 @@
-export const moduleName = `@mini/common`;
+export const moduleName = `@agilejs/common`;
 
 /**
  * the configuration file of `mini-build`

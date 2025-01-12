@@ -1,4 +1,4 @@
-import { defineConfig } from "@mini/common";
+import { defineConfig } from "@agilejs/common";
 import path, { join } from "path";
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);

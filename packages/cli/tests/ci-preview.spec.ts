@@ -3,7 +3,7 @@ import { join } from 'path';
 import { getDirname } from '@armit/file-utility';
 import { runScript } from './run-script.js';
 
-describe('@mini/cli `preview`', () => {
+describe('@agilejs/cli `preview`', () => {
   const fixtureCwd = getDirname(import.meta.url);
   const program = join(fixtureCwd, 'ci-program.ts');
   const miniprogramCwd = join(fixtureCwd, 'fixtures');

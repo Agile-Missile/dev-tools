@@ -1,5 +1,5 @@
 ---
-"@mini/cli": patch
+"@agilejs/cli": patch
 ---
 
 publish mini cli

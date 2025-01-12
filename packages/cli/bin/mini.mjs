@@ -7,5 +7,5 @@ bootstrap()
     cli.parse(process.argv.slice(2));
   })
   .catch((err) => {
-    console.log(`${terminalColor(['red'])('@mini/cli')} `, err);
+    console.log(`${terminalColor(['red'])('@agilejs/cli')} `, err);
   });

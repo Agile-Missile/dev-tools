@@ -1,1 +1,1 @@
-# @mini/sculpt
+# @agilejs/sculpt

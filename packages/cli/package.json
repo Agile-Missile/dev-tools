@@ -1,6 +1,6 @@
 {
-  "name": "@mini/cli",
-  "version": "1.0.1-next.0",
+  "name": "@agilejs/cli",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "@agilejs/commander": "^1.0.9",
+    "@agilejs/common": "workspace:*",
     "@agilejs/terminal": "^1.0.8",
-    "@mini/common": "workspace:*",
     "type-fest": "4.31.0"
   },
   "devDependencies": {

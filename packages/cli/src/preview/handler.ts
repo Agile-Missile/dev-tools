@@ -9,7 +9,7 @@ import {
   type MiniOptions,
   preview,
   requireResolve,
-} from '@mini/common';
+} from '@agilejs/common';
 
 export type PreviewCommandArgs = CommandArgv<{
   /**

@@ -1,1 +1,1 @@
-# @mini/common
+# @agilejs/common

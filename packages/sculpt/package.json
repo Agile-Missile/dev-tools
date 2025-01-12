@@ -1,5 +1,5 @@
 {
-  "name": "@mini/sculpt",
+  "name": "@agilejs/sculpt",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
@@ -30,7 +30,7 @@
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@mini/common": "workspace:*"
+    "@agilejs/common": "workspace:*"
   },
   "devDependencies": {
     "@agilejs/typing-beautify": "1.0.6",
