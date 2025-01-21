@@ -17,6 +17,10 @@ To get started with miniprogram-tools, follow these steps:
 2. Install the dependencies: `npm install` or `yarn install`
 3. Explore the tools and start using them to enhance your mini program development experience.
 
+## Package Readmes
+
+- [@agilejs/cli](/packages/cli/README.md)
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to miniprogram-tools, please follow the guidelines outlined in our [CONTRIBUTING.md](CONTRIBUTING.md) file.
