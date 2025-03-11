@@ -78,11 +78,16 @@ export class UploadCommand extends AbstractHandler<UploadCommandArgs> {
       const res = await upload(project, {
         version: miniVer,
         desc: miniDesc,
+        setting: {
+          useProjectConfig: true,
+        },
       });
       this.logger.info(JSON.stringify(res));
     } catch (error: any) {
       this.logger.error(error);
       throw new Error(error);
+    } finally {
+      process.exit(0);
     }
   }
 }

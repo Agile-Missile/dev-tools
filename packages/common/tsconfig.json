@@ -6,6 +6,7 @@
     "noImplicitAny": false,
     "noEmit": false,
     "incremental": true,
+    "strict": false,
     "paths": {},
     "types": ["vitest/globals", "node"]
   },

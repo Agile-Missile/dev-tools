@@ -14,7 +14,6 @@ const packageJson = readPackageData({
 void createCli({
   context: '@mini',
   packageJson,
-  exitProcess: true,
 })
   .register(miniCommand)
   .parse(process.argv.slice(2));

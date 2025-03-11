@@ -15,8 +15,8 @@
         "showShadowRootInWxmlPanel": true,
         "packNpmManually": true,
         "packNpmRelationList": [{
-            "packageJsonPath": "./package.json",
-            "miniprogramNpmDistDir": "./"
+                "packageJsonPath": "./package.json",
+                "miniprogramNpmDistDir": "./miniprogram/"
         }],
         "babelSetting": {
             "ignore": [],

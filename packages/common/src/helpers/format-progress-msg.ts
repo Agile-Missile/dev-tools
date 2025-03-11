@@ -7,6 +7,7 @@ const ColorMap: Record<MiniProgramCI.ITaskStatus['status'], ChalkInstance> = {
   done: chalk.green,
   fail: chalk.red,
   warn: chalk.yellow,
+  info: chalk.blue,
 };
 
 export const formatProgressMsg = (task: MiniProgramCI.ITaskStatus | string) => {

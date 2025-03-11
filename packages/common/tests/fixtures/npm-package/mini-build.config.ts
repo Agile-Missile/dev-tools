@@ -8,6 +8,6 @@ export default defineConfig({
         appid: 'wx0a60ec391e1c8dee',
         privateKeyPath:join(path.dirname(__filename),'.cache/private.wx0a60ec391e1c8dee.key'),
         projectPath:'./',
-        type:'miniGame'
+        type:'miniProgram'
     }
 })

@@ -111,6 +111,8 @@ export class PreviewCommand extends AbstractHandler<PreviewCommandArgs> {
     } catch (error: any) {
       this.logger.error(error);
       throw new Error(error);
+    } finally {
+      process.exit(0);
     }
   }
 }
